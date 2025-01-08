@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const PokeLista = (props) => {
     const [pokemons, setPokemons] = useState([]);
@@ -31,7 +32,7 @@ const PokeLista = (props) => {
         return <><p>
                 Este pokemon es {p.name}
                 </p>
-                <div onClick={() => {navigate("/pokemon/" + p.name)}}></div>
+                <div onClick={() => {navigate("/pokemon/" + p.name)}}>Navegar</div>
                 <Link to={"pokemon/" + p.name}>Navegar</Link>
             </>
         }
